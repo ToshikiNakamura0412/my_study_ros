@@ -7,14 +7,14 @@ std::tuple<int, int>get_test_tuple()
 
 int main(int argc, char* argv[])
 {
-    // ----- ROS STREAM -----
+    // ===== ROS =====
+    // ----- STREAM -----
     // ROS_INFO_STREAM("INFO");
     // ROS_WARN_STREAM("WARN");
     // ROS_ERROR_STREAM("ERROR");
     // ROS_INFO_STREAM("INFO");
 
-
-    // ----- ROS getParam -----
+    // ----- getParam -----
     // ros::init(argc, argv, "my_study_ros");
     // ros::NodeHandle nh_;
     // int num = 0;
@@ -26,7 +26,8 @@ int main(int argc, char* argv[])
     // ROS_INFO_STREAM(floor(3.14));
 
 
-    // ----- vector push_back(多次元配列) -----
+    // ===== C++ vector =====
+    // ----- push_back(多次元配列) -----
     // std::vector<std::vector<int>> matrix;
     // std::vector<int> point{10,20};
     // for(int i=0; i<3; i++) matrix.push_back(point);
@@ -44,7 +45,7 @@ int main(int argc, char* argv[])
     //     }
     // }
 
-    // ----- vector push_back(末尾に追加) -----
+    // ----- insert -----
     // std::vector<int> insert_test_vector;
     // std::vector<int> point{1,2,3,4,5};
     // for(int i=0; i<3; i++) insert_test_vector.insert(insert_test_vector.end(), point.begin(), point.end());
@@ -58,7 +59,7 @@ int main(int argc, char* argv[])
     //         std::cout << "}" << std::endl;
     // }
 
-    // ----- vector erase -----
+    // ----- erase -----
     // std::vector<int> erase_test_vector;
     // for(int i=0; i<5; i++) erase_test_vector.push_back(i);
     // for(int i=0; i<erase_test_vector.size(); i++) std::cout << erase_test_vector[i] << std::endl;
@@ -66,7 +67,7 @@ int main(int argc, char* argv[])
     // erase_test_vector.erase(erase_test_vector.begin()+3);
     // for(int i=0; i<erase_test_vector.size(); i++) std::cout << erase_test_vector[i] << std::endl;
 
-    // ----- vector reverse -----
+    // ----- reverse -----
     // std::vector<int> reverse_test_vector;
     // for(int i=0; i<5; i++) reverse_test_vector.push_back(i);
     // for(int i=0; i<reverse_test_vector.size(); i++) std::cout << reverse_test_vector[i] << std::endl;
@@ -75,7 +76,8 @@ int main(int argc, char* argv[])
     // for(int i=0; i<reverse_test_vector.size(); i++) std::cout << reverse_test_vector[i] << std::endl;
 
 
-    // ----- tie + tuple + make_tuple -----
+    // ===== C++ other =====
+    // ----- tuple -----
     // int a, b;
     // std::cout << "a: " << a << ", b: " << b << std::endl;
     // std::tie(a, b) = get_test_tuple();
