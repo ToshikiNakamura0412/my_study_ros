@@ -1,4 +1,5 @@
 #include <ros/ros.h>
+#include <geometry_msgs/PointStamped.h>
 
 std::tuple<int, int>get_test_tuple()
 {
@@ -16,14 +17,28 @@ int main(int argc, char* argv[])
 
     // ----- getParam -----
     // ros::init(argc, argv, "my_study_ros");
-    // ros::NodeHandle nh_;
+    // ros::NodeHandle nh;
     // int num = 0;
     // ROS_INFO_STREAM(num);
-    // nh_.getParam("test_num1", num);
+    // nh.getParam("test_num1", num);
     // ROS_INFO_STREAM(num);
-    // nh_.getParam("test_num2", num);
+    // nh.getParam("test_num2", num);
     // ROS_INFO_STREAM(num);
     // ROS_INFO_STREAM(floor(3.14));
+
+    // ----- publish PointStamped -----
+    // ros::init(argc, argv, "my_study_ros");
+    // ros::NodeHandle nh;
+    // ros::Publisher pub_point;
+    // pub_point = nh.advertise<geometry_msgs::PointStamped>("/test_point",1);
+    // geometry_msgs::PointStamped point;
+    // point.header.frame_id = "map";
+    // point.point.x = 11.5;
+    // point.point.y = 10.0;
+    // while(ros::ok())
+    // {
+    //     pub_point.publish(point);
+    // }
 
 
     // ===== C++ vector =====
