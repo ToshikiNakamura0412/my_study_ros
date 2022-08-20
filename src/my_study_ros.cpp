@@ -15,6 +15,11 @@ int main(int argc, char* argv[])
     // ROS_ERROR_STREAM("ERROR");
     // ROS_INFO_STREAM("INFO");
 
+    // ----- INFO_STREAM -----
+    // int a = 1;
+    // double b = 2.0;
+    // ROS_INFO_STREAM("a: " << a << ", b: " <<  b);
+
     // ----- getParam -----
     // ros::init(argc, argv, "my_study_ros");
     // ros::NodeHandle nh;
