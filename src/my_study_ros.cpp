@@ -1,4 +1,5 @@
 #include <ros/ros.h>
+#include <std_msgs/Bool.h>
 #include <geometry_msgs/PointStamped.h>
 
 std::tuple<int, int>get_test_tuple()
@@ -44,6 +45,11 @@ int main(int argc, char* argv[])
     // {
     //     pub_point.publish(point);
     // }
+
+    // ----- std_msgs -----
+    // std_msgs::Bool flag_test_;
+    // flag_test_.data = false;
+    // ROS_INFO_STREAM(flag_test_);
 
 
     // ===== C++ vector =====
