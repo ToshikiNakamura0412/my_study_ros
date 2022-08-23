@@ -1,10 +1,16 @@
 #include <ros/ros.h>
 #include <std_msgs/Bool.h>
+#include <nav_msgs/OccupancyGrid.h>
 #include <geometry_msgs/PointStamped.h>
 
 std::tuple<int, int>get_test_tuple()
 {
     return std::make_tuple(4, 100);
+}
+
+void map_callback(const nav_msgs::OccupancyGrid::ConstPtr& msg)
+{
+    std::cout << "subscribe a map!" << std::endl;
 }
 
 int main(int argc, char* argv[])
@@ -50,6 +56,18 @@ int main(int argc, char* argv[])
     // std_msgs::Bool flag_test_;
     // flag_test_.data = false;
     // ROS_INFO_STREAM(flag_test_);
+
+    // ----- spinOnce -----
+    // ros::init(argc, argv, "my_study_ros");
+    // ros::NodeHandle nh;
+    // ros::Subscriber sub_map;
+    // sub_map = nh.subscribe("/map", 1, &map_callback);
+    // while(ros::ok())
+    // {
+    //     ros::spinOnce();
+    //     std::cout << "[Test] spinOnce" << std::endl;
+    //     ros::Duration(1).sleep();
+    // }
 
 
     // ===== C++ vector =====
