@@ -1,7 +1,9 @@
 #include <ros/ros.h>
 #include <std_msgs/Bool.h>
 #include <nav_msgs/OccupancyGrid.h>
+#include <geometry_msgs/PoseStamped.h>
 #include <geometry_msgs/PointStamped.h>
+#include <geometry_msgs/TransformStamped.h>
 
 std::tuple<int, int>get_test_tuple()
 {
@@ -56,6 +58,16 @@ int main(int argc, char* argv[])
     // std_msgs::Bool flag_test_;
     // flag_test_.data = false;
     // ROS_INFO_STREAM(flag_test_);
+
+    // ----- PoseStamped -----
+    // geometry_msgs::PoseStamped pose_stamped_test;
+    // ROS_INFO_STREAM("<< PoseStamped >>");
+    // ROS_INFO_STREAM(pose_stamped_test);
+
+    // ----- TransformStamped -----
+    // geometry_msgs::TransformStamped transform_stamped_test;
+    // ROS_INFO_STREAM("<< TransformStamped >>");
+    // ROS_INFO_STREAM(transform_stamped_test);
 
     // ----- spinOnce -----
     // ros::init(argc, argv, "my_study_ros");
