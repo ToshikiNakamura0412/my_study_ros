@@ -139,5 +139,9 @@ int main(int argc, char* argv[])
     // std::tie(a, b) = get_test_tuple();
     // std::cout << "a: " << a << ", b: " << b << std::endl;
 
+    // ----- pow -----
+    // double a = 2.0;
+    // std::cout << "pow(2.0,3.0)=" << pow(a,3.0) << std::endl;
+
     return 0;
 }
