@@ -15,6 +15,21 @@ void map_callback(const nav_msgs::OccupancyGrid::ConstPtr& msg)
     std::cout << "subscribe a map!" << std::endl;
 }
 
+class Pose
+{
+public:
+    Pose(const double x, const double y){
+        x_=x; y_=y;
+    }
+    void show(){
+        std::cout << "x=" << x_ << ", y=" << y_ << std::endl;
+    }
+private:
+    double x_;
+    double y_;
+};
+
+
 int main(int argc, char* argv[])
 {
     // ===== ROS =====
@@ -142,6 +157,19 @@ int main(int argc, char* argv[])
     // ----- pow -----
     // double a = 2.0;
     // std::cout << "pow(2.0,3.0)=" << pow(a,3.0) << std::endl;
+
+    // ----- operator -----
+    // operator= いらない?
+    // Pose pose1(1,2);
+    // Pose pose2(1,2);
+    // std::cout << "pose1" << std::endl;
+    // pose1.show();
+    // pose1 = Pose(3,4);
+    // std::cout << "代入" << std::endl;
+    // pose1.show();
+    // pose1 = pose2;
+    // std::cout << "代入" << std::endl;
+    // pose1.show();
 
     return 0;
 }
