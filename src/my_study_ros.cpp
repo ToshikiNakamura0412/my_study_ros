@@ -157,9 +157,11 @@ int main(int argc, char* argv[])
     // ----- pow -----
     // double a = 2.0;
     // std::cout << "pow(2.0,3.0)=" << pow(a,3.0) << std::endl;
+    // std::cout << "type: " << typeid(pow(a,3.0)).name() << std::endl;
 
     // ----- operator -----
     // operator= いらない?
+    // コンパイル時に生成されるものはいらない
     // Pose pose1(1,2);
     // Pose pose2(1,2);
     // std::cout << "pose1" << std::endl;
