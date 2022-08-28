@@ -145,6 +145,14 @@ int main(int argc, char* argv[])
     // std::cout << "<< reverse >>" << std::endl;
     // reverse(reverse_test_vector.begin(), reverse_test_vector.end());
     // for(int i=0; i<reverse_test_vector.size(); i++) std::cout << reverse_test_vector[i] << std::endl;
+    // ----- duplicate -----
+    // std::vector<int> origin;
+    // for(int i=0; i<10; i++) origin.push_back(i);
+    // std::cout << "origin" << std::endl;
+    // for(int i=0; i<origin.size(); i++) std::cout << "[" << i << "]: " << origin[i] << std::endl;
+    // std::vector<int> copy(origin);
+    // std::cout << "copy" << std::endl;
+    // for(int i=0; i<copy.size(); i++) std::cout << "[" << i << "]: " << copy[i] << std::endl;
 
 
     // ===== C++ other =====
