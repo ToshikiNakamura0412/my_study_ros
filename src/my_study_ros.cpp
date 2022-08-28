@@ -15,6 +15,13 @@ void map_callback(const nav_msgs::OccupancyGrid::ConstPtr& msg)
     std::cout << "subscribe a map!" << std::endl;
 }
 
+struct positon
+{
+    double x = 0.0;
+    double y = 0.0;
+    double z = 0.0;
+};
+
 class Pose
 {
 public:
@@ -185,6 +192,22 @@ int main(int argc, char* argv[])
     // std::cout << "RAND_MAX: " << RAND_MAX << std::endl;
     // for(int i=0; i<10; i++)
     //         std::cout << "rand" << i << ": " << (double)rand()/(RAND_MAX * 10.0) << std::endl;
+
+    // ----- struct -----
+    // positon position1;
+    // positon position2;
+    // position2.x = 10.0;
+    // position2.y = 20.0;
+    // position2.z = 30.0;
+    // std::cout <<"position1" << std::endl;
+    // std::cout <<"x: " << position1.x << std::endl;
+    // std::cout <<"y: " << position1.y << std::endl;
+    // std::cout <<"z: " << position1.z << std::endl;
+    // position1 = position2;
+    // std::cout <<"position1" << std::endl;
+    // std::cout <<"x: " << position1.x << std::endl;
+    // std::cout <<"y: " << position1.y << std::endl;
+    // std::cout <<"z: " << position1.z << std::endl;
 
     return 0;
 }
