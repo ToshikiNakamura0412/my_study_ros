@@ -173,5 +173,10 @@ int main(int argc, char* argv[])
     // std::cout << "代入" << std::endl;
     // pose1.show();
 
+    // ----- rand -----
+    // std::cout << "RAND_MAX: " << RAND_MAX << std::endl;
+    // for(int i=0; i<10; i++)
+    //         std::cout << "rand" << i << ": " << (double)rand()/(RAND_MAX * 10.0) << std::endl;
+
     return 0;
 }
