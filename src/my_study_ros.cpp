@@ -15,6 +15,32 @@ void map_callback(const nav_msgs::OccupancyGrid::ConstPtr& msg)
     std::cout << "subscribe a map!" << std::endl;
 }
 
+void sort_data(std::vector<double>& data)
+{
+    double tmp;
+    for(int i=0; i<data.size()-1; i++)
+    {
+        for(int j=i+1; j<data.size(); j++)
+        {
+            if(data[i] > data[j])
+            {
+                tmp     = data[i];
+                data[i] = data[j];
+                data[j] = tmp;
+            }
+        }
+    }
+}
+
+double get_median(std::vector<double>& data)
+{
+    sort_data(data);
+    if(data.size()%2 == 1)
+        return data[(data.size()-1) / 2];
+    else
+        return (data[data.size()/2 - 1] + data[data.size()/2]) / 2.0;
+}
+
 struct positon
 {
     double x = 0.0;
@@ -152,6 +178,7 @@ int main(int argc, char* argv[])
     // std::cout << "<< reverse >>" << std::endl;
     // reverse(reverse_test_vector.begin(), reverse_test_vector.end());
     // for(int i=0; i<reverse_test_vector.size(); i++) std::cout << reverse_test_vector[i] << std::endl;
+
     // ----- duplicate -----
     // std::vector<int> origin;
     // for(int i=0; i<10; i++) origin.push_back(i);
@@ -160,6 +187,15 @@ int main(int argc, char* argv[])
     // std::vector<int> copy(origin);
     // std::cout << "copy" << std::endl;
     // for(int i=0; i<copy.size(); i++) std::cout << "[" << i << "]: " << copy[i] << std::endl;
+
+    // ----- sort -----
+    // std::vector<double> data;
+    // for(double i=10.0; i>0.0; i--) data.push_back(i);
+    // for(int i=0; i<data.size(); i++) std::cout << "[" << i << "]: " << data[i] << std::endl;
+    // sort_data(data);
+    // std::cout << "sort data" << std::endl;
+    // for(int i=0; i<data.size(); i++) std::cout << "[" << i << "]: " << data[i] << std::endl;
+    // std::cout << "median: " << get_median(data) << std::endl;
 
 
     // ===== C++ other =====
