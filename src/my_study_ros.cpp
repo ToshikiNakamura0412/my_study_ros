@@ -4,6 +4,7 @@
 #include <geometry_msgs/PoseStamped.h>
 #include <geometry_msgs/PointStamped.h>
 #include <geometry_msgs/TransformStamped.h>
+#include <tf2/utils.h>
 
 std::tuple<int, int>get_test_tuple()
 {
@@ -111,6 +112,31 @@ int main(int argc, char* argv[])
     //     std::cout << "[Test] spinOnce" << std::endl;
     //     ros::Duration(1).sleep();
     // }
+
+    // ===== Quaternion =====
+    // tf2::Quaternion q;
+    // std::cout << std::fixed << std::setprecision(3);
+    // for(double yaw= 0.0; yaw<=2.0*M_PI; yaw+=M_PI/6.0)
+    // {
+    //     std::cout << "\nyaw=" << yaw;
+    //     q.setRPY(0, 0, yaw);
+    //     std::cout << " -> q.x=" << q.x();
+    //     std::cout << ", q.y=" << q.y();
+    //     std::cout << ", q.z=" << q.z();
+    //     std::cout << ", q.w=" << q.w();
+    //     std::cout << ", tf2::yaw=" << tf2::getYaw(q);
+    // }
+    // for(double yaw= 0.0; yaw>=-2.0*M_PI; yaw-=M_PI/6.0)
+    // {
+    //     std::cout << "\nyaw=" << yaw;
+    //     q.setRPY(0, 0, yaw);
+    //     std::cout << " -> q.x=" << q.x();
+    //     std::cout << ", q.y=" << q.y();
+    //     std::cout << ", q.z=" << q.z();
+    //     std::cout << ", q.w=" << q.w();
+    //     std::cout << ", tf2::yaw=" << tf2::getYaw(q);
+    // }
+
 
 
     // ===== C++ vector =====
