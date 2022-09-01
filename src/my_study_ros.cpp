@@ -15,26 +15,9 @@ void map_callback(const nav_msgs::OccupancyGrid::ConstPtr& msg)
     std::cout << "subscribe a map!" << std::endl;
 }
 
-void sort_data(std::vector<double>& data)
-{
-    double tmp;
-    for(int i=0; i<data.size()-1; i++)
-    {
-        for(int j=i+1; j<data.size(); j++)
-        {
-            if(data[i] > data[j])
-            {
-                tmp     = data[i];
-                data[i] = data[j];
-                data[j] = tmp;
-            }
-        }
-    }
-}
-
 double get_median(std::vector<double>& data)
 {
-    sort_data(data);
+    sort(begin(data), end(data));
     if(data.size()%2 == 1)
         return data[(data.size()-1) / 2];
     else
@@ -192,7 +175,7 @@ int main(int argc, char* argv[])
     // std::vector<double> data;
     // for(double i=10.0; i>0.0; i--) data.push_back(i);
     // for(int i=0; i<data.size(); i++) std::cout << "[" << i << "]: " << data[i] << std::endl;
-    // sort_data(data);
+    // sort(begin(data), end(data));
     // std::cout << "sort data" << std::endl;
     // for(int i=0; i<data.size(); i++) std::cout << "[" << i << "]: " << data[i] << std::endl;
     // std::cout << "median: " << get_median(data) << std::endl;
