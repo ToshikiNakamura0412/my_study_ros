@@ -210,6 +210,12 @@ int main(int argc, char* argv[])
     // std::cout << "pow(2.0,3.0)=" << pow(a,3.0) << std::endl;
     // std::cout << "type: " << typeid(pow(a,3.0)).name() << std::endl;
 
+    // ----- cos -----
+    // for(double angle= 0.0; angle<=2.0*M_PI; angle+=M_PI/6.0)
+    //     std::cout << "cos(" << angle << ")=" << cos(angle) <<std::endl;
+    // for(double angle= 0.0; angle>=-2.0*M_PI; angle-=M_PI/6.0)
+    //     std::cout << "cos(" << angle << ")=" << cos(angle) <<std::endl;
+
     // ----- operator -----
     // operator= いらない?
     // コンパイル時に生成されるものはいらない
